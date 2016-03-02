@@ -1,7 +1,6 @@
 # ng2-progress-bar
 
-Simple progress bar control for your angular2 applications using bootstrap3.
-Does not depend of jquery or bootstrap.js.
+Simple progress bar control for your angular2 applications using bootstrap3. Does not depend of jquery.
 
 ## Installation
 
@@ -12,6 +11,9 @@ Does not depend of jquery or bootstrap.js.
 ```typescript
 <progress-bar [value]="50" [max]="100"></progress-bar>
 ```
+
+* `value` is a progress number
+* `max` is a maximal number of the progress. By default is 100.
 
 ## Sample
 
@@ -32,8 +34,6 @@ export class App {
 
 }
 ```
-
-## Samples
 
 Take a look on samples in [./sample](https://github.com/pleerock/ng2-progress-bar/tree/master/sample) for more examples of
 usages.
