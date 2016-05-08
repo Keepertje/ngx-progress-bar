@@ -4,8 +4,22 @@ Simple progress bar control for your angular2 applications using bootstrap3. Doe
 
 ## Installation
 
+1. Install npm module:
+
 `npm install ng2-progress-bar --save`
 
+2. If you are using system.js you may want to add this into `map` and `package` config:
+
+```json
+{
+    "map": {
+        "ng2-progress-bar": "node_modules/ng2-progress-bar"
+    },
+    "packages": {
+        "ng2-progress-bar": { "main": "index.js", "defaultExtension": "js" }
+    }
+}
+```
 ## Usage
 
 ```typescript
@@ -18,7 +32,7 @@ Simple progress bar control for your angular2 applications using bootstrap3. Doe
 ## Sample
 
 ```typescript
-import {Component} from "angular2/core";
+import {Component} from "@angular/core";
 import {ProgressBar} from "ng2-progress-bar/ProgressBar";
 
 @Component({

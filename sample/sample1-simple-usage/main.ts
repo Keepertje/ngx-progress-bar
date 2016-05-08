@@ -1,6 +1,6 @@
-import {bootstrap} from "angular2/platform/browser";
-import {Component} from "angular2/core";
-import {ProgressBar} from "../../src/ProgressBar";
+import {bootstrap} from "@angular/platform-browser-dynamic";
+import {Component} from "@angular/core";
+import {ProgressBar} from "../../src/index";
 
 @Component({
     selector: "app",
