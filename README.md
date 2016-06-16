@@ -7,21 +7,21 @@ Please star a project if you liked it, or create an issue if you have problems w
 ## Installation
 
 1. Install npm module:
-
-`npm install ng2-progress-bar --save`
+    
+    `npm install ng2-progress-bar --save`
 
 2. If you are using system.js you may want to add this into `map` and `package` config:
 
-```json
-{
-    "map": {
-        "ng2-progress-bar": "node_modules/ng2-progress-bar"
-    },
-    "packages": {
-        "ng2-progress-bar": { "main": "index.js", "defaultExtension": "js" }
+    ```json
+    {
+        "map": {
+            "ng2-progress-bar": "node_modules/ng2-progress-bar"
+        },
+        "packages": {
+            "ng2-progress-bar": { "main": "index.js", "defaultExtension": "js" }
+        }
     }
-}
-```
+    ```
 ## Usage
 
 ```typescript
