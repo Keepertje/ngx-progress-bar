@@ -1,6 +1,6 @@
 {
   "name": "ng2-progress-bar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple progress bar control for your angular2 applications using bootstrap3.",
   "license": "MIT",
   "readmeFilename": "README.md",
