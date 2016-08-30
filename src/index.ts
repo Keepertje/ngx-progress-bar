@@ -6,10 +6,10 @@ import {Component, Input} from "@angular/core";
 <div class="progress">
     <div class="progress-bar"
         role="progressbar"
-        [attr.aria-valuenow]="value / max * 100"
+        [attr.aria-valuenow]="getProgress()"
         aria-valuemin="0"
-        [attr.aria-valuemax]="value / max * 100" [ngStyle]="{ width: value / max * 100 + '%' }">
-        <span class="sr-only">{{ value / max * 100 }}% Complete</span>
+        [attr.aria-valuemax]="getProgress()" [ngStyle]="{ width: getProgress() + '%' }">
+        <span class="sr-only">{{ getProgress() }}% Complete</span>
     </div>
 </div>
 `
@@ -21,5 +21,12 @@ export class ProgressBar {
 
     @Input()
     max = 100;
+
+    getProgress() {
+        if (this.max === 0)
+            return 0;
+
+        return this.value / this.max * 100;
+    }
 
 }
