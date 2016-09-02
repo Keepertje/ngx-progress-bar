@@ -25,17 +25,18 @@ Please star a project if you liked it, or create an issue if you have problems w
 ## Usage
 
 ```typescript
-<progress-bar [value]="50" [max]="100"></progress-bar>
+<progress-bar [value]="50" [max]="100" title="Text to be put in the progress bar"></progress-bar>
 ```
 
 * `value` is a progress number
 * `max` is a maximal number of the progress. By default is 100.
+* `title` is a text that will be shown in the progress bar. This is optional.
 
 ## Sample
 
 ```typescript
 import {Component} from "@angular/core";
-import {ProgressBar} from "ng2-progress-bar/ProgressBar";
+import {ProgressBarModule} from "ng2-progress-bar";
 
 @Component({
     selector: "app",
@@ -43,10 +44,25 @@ import {ProgressBar} from "ng2-progress-bar/ProgressBar";
     <div class="container">
         <progress-bar [value]="50" [max]="100"></progress-bar>
     </div>
-    `,
-    directives: [ProgressBar]
+    `
 })
 export class App {
+
+}
+
+@NgModule({
+    imports: [
+        // ...
+        ProgressBarModule
+    ],
+    declarations: [
+        App
+    ],
+    bootstrap: [
+        App
+    ]
+})
+export class AppModule {
 
 }
 ```

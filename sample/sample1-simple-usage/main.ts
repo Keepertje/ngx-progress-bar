@@ -1,18 +1,39 @@
-import {bootstrap} from "@angular/platform-browser-dynamic";
-import {Component} from "@angular/core";
-import {ProgressBar} from "../../src/index";
+import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
+import {Component, NgModule} from "@angular/core";
+import {BrowserModule} from "@angular/platform-browser";
+import {ProgressBarModule} from "../../src/index";
 
 @Component({
     selector: "app",
     template: `
 <div class="container">
-    <progress-bar [value]="50"></progress-bar>
+    
+    Simple progress bar:<br/>
+    <progress-bar [value]="50"></progress-bar><br/><br/>
+    
+    Progress bar with title:<br/>
+    <progress-bar [value]="10" title="Hello progress bar"></progress-bar>
 </div>
-`,
-    directives: [ProgressBar]
+`
 })
 export class Sample1App {
 
 }
 
-bootstrap(Sample1App);
+@NgModule({
+    imports: [
+        BrowserModule,
+        ProgressBarModule
+    ],
+    declarations: [
+        Sample1App
+    ],
+    bootstrap: [
+        Sample1App
+    ]
+})
+export class Sample1Module {
+
+}
+
+platformBrowserDynamic().bootstrapModule(Sample1Module);
