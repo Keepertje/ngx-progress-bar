@@ -1,6 +1,6 @@
 {
   "name": "ng2-progress-bar",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Simple progress bar control for your angular2 applications using bootstrap3.",
   "license": "MIT",
   "readmeFilename": "README.md",
@@ -23,7 +23,7 @@
     "angular2-progress-bar"
   ],
   "peerDependencies": {
-    "@angular/core": "^2.0.0-rc.6"
+    "@angular/core": "^2.0.0"
   },
   "devDependencies": {
     "@angular/common": "^2.3.1",
